@@ -50,9 +50,8 @@ public class InstructorManager implements InstructorService {
     public DataResult<UpdateInstructorResponse> update(UpdateInstructorRequest updateInstructorRequest) {
         Instructor instructor = this.modelMapperService.forRequest().map(updateInstructorRequest, Instructor.class);
         this.instructorRepository.save(instructor);
-        UpdateInstructorResponse response =this.modelMapperService.forResponse().map(instructor,UpdateInstructorResponse.class);
-
-        return new SuccessDataResult<UpdateInstructorResponse>(response,Messages.InstructorUpdated);
+        UpdateInstructorResponse response = this.modelMapperService.forResponse().map(instructor, UpdateInstructorResponse.class);
+        return new SuccessDataResult<UpdateInstructorResponse>(response, Messages.InstructorUpdated);
     }
 
     @Override

@@ -1,4 +1,7 @@
 package com.kodlamaio.bootcampproject.dataAccess.abstracts.users;
 
-public interface ApplicantRepository {
+import com.kodlamaio.bootcampproject.entities.users.Applicant;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ApplicantRepository extends JpaRepository<Applicant, Integer> {
 }
