@@ -3,5 +3,12 @@ package com.kodlamaio.bootcampproject.business.constants;
 public class Messages {
     public static final String InstructorDeleted = "Instructor Deleted";
     public static final String InstructorCreated = "Instructor Created";
-    public static final String InstructorUpdated = "Instructor Updated"; ;
+    public static final String InstructorUpdated = "Instructor Updated";
+    public static final String EmployeeDeleted = "Employee Deleted";
+    public static final String EmployeeCreated = "Employee Created";
+    public static final String EmployeeUpdated = "Employee Updated";
+
+
+
+    ;
 }
