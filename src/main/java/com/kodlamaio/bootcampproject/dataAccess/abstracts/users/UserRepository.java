@@ -1,4 +1,4 @@
-package com.kodlamaio.bootcampproject.dataAccess;
+package com.kodlamaio.bootcampproject.dataAccess.abstracts.users;
 
 import com.kodlamaio.bootcampproject.entities.users.User;
 import org.springframework.data.jpa.repository.JpaRepository;

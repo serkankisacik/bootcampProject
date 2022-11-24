@@ -12,6 +12,10 @@ public class Messages {
     public static final String ApplicantCreated = "Applicant Created";
     public static final String ApplicantUpdated = "Applicant Updated";
 
+    public static final String UserDeleted = "User Deleted";
+    public static final String UserCreated = "User Created";
+
+    public static final String UserUpdated = "User Updated";
 
 
     ;

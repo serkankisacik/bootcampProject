@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateInstructorResponse {
+public class UpdateUserResponse {
     private String firstName;
     private String lastName;
     private String email;
-    private String companyName;
 }
