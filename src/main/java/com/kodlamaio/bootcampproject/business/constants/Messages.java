@@ -15,4 +15,6 @@ public class Messages {
     public static final String UserUpdated = "User Updated";
     public static final String InstructorAlreadyExists = "Instructor Already Exists";
     public static final String InstructorNotFound = "Instructor Not Found";
+    public static final String EmployeeAlreadyExists = "Employee Already Exists";
+    public static final String EmployeeNotFound = "Employee Not Found";
 }

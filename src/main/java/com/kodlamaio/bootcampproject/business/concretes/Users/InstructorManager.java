@@ -28,6 +28,7 @@ public class InstructorManager implements InstructorService {
 
     @Override
     public Result delete(int id) {
+        checkIfInstructorExistById(id);
         this.instructorRepository.deleteById(id);
         return new SuccessResult(Messages.InstructorDeleted);
     }

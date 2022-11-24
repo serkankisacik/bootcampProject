@@ -5,6 +5,7 @@ import com.kodlamaio.bootcampproject.business.constants.Messages;
 import com.kodlamaio.bootcampproject.business.requests.CreateEmployeeRequest;
 import com.kodlamaio.bootcampproject.business.requests.UpdateEmployeeRequest;
 import com.kodlamaio.bootcampproject.business.responses.*;
+import com.kodlamaio.bootcampproject.core.exceptions.BusinessException;
 import com.kodlamaio.bootcampproject.core.utilities.mapping.ModelMapperService;
 import com.kodlamaio.bootcampproject.core.utilities.results.DataResult;
 import com.kodlamaio.bootcampproject.core.utilities.results.Result;
@@ -16,6 +17,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,12 +29,14 @@ public class EmployeeManager implements EmployeeService {
 
     @Override
     public Result delete(int id) {
+        checkIfEmployeeExistById(id);
         this.employeeRepository.deleteById(id);
         return new SuccessResult(Messages.EmployeeDeleted);
     }
 
     @Override
     public DataResult<CreateEmployeeResponse> add(CreateEmployeeRequest createEmployeeRequest) {
+        checkIfEmployeeExistByNationalId(createEmployeeRequest.getNationalId());
         Employee employee = this.modelMapperService.forRequest().map(createEmployeeRequest, Employee.class);
         this.employeeRepository.save(employee);
         CreateEmployeeResponse createEmployeeResponse = this.modelMapperService.forResponse().map(employee, CreateEmployeeResponse.class);
@@ -57,8 +61,22 @@ public class EmployeeManager implements EmployeeService {
 
     @Override
     public DataResult<GetEmployeeResponse> getById(int id) {
-        Employee employee = this.employeeRepository.findById(id).get();
+        Employee employee = this.employeeRepository.findById(id);
         GetEmployeeResponse response = this.modelMapperService.forResponse().map(employee, GetEmployeeResponse.class);
         return new SuccessDataResult<GetEmployeeResponse>(response);
+    }
+
+    private void checkIfEmployeeExistByNationalId(String nationalId) {
+        Employee employeeCheck = this.employeeRepository.findByEmployeeByNationalId(nationalId);
+        if (employeeCheck != null) {
+            throw new BusinessException(Messages.EmployeeAlreadyExists);
+        }
+    }
+
+    private void checkIfEmployeeExistById(int id) {
+        Employee employeeCheck = this.employeeRepository.findById(id);
+        if (employeeCheck == null){
+            throw new BusinessException(Messages.EmployeeNotFound);
+        }
     }
 }
