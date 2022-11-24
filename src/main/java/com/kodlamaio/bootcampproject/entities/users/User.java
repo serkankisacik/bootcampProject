@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "users")
@@ -26,5 +27,10 @@ public class User {
     private String email;
     @Column(name = "password")
     private String password;
+    @Column(name = "dateOfBirth")
+    private LocalDate dateOfBirth;
+    @Column(name = "nationalId")
+    private String nationalId;
+
 
 }
