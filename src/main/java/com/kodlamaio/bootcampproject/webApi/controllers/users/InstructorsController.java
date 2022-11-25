@@ -1,12 +1,12 @@
 package com.kodlamaio.bootcampproject.webApi.controllers.users;
 
 import com.kodlamaio.bootcampproject.business.abstracts.users.InstructorService;
-import com.kodlamaio.bootcampproject.business.requests.CreateInstructorRequest;
-import com.kodlamaio.bootcampproject.business.requests.UpdateInstructorRequest;
-import com.kodlamaio.bootcampproject.business.responses.CreateInstructorResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetAllInstructorResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetInstructorResponse;
-import com.kodlamaio.bootcampproject.business.responses.UpdateInstructorResponse;
+import com.kodlamaio.bootcampproject.business.requests.users.CreateInstructorRequest;
+import com.kodlamaio.bootcampproject.business.requests.users.UpdateInstructorRequest;
+import com.kodlamaio.bootcampproject.business.responses.users.CreateInstructorResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetAllInstructorResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetInstructorResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.UpdateInstructorResponse;
 import com.kodlamaio.bootcampproject.core.utilities.results.DataResult;
 import com.kodlamaio.bootcampproject.core.utilities.results.Result;
 import lombok.AllArgsConstructor;

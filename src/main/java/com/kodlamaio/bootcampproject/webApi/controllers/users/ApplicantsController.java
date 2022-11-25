@@ -1,18 +1,19 @@
 package com.kodlamaio.bootcampproject.webApi.controllers.users;
 
 import com.kodlamaio.bootcampproject.business.abstracts.users.ApplicantService;
-import com.kodlamaio.bootcampproject.business.abstracts.users.ApplicantService;
-import com.kodlamaio.bootcampproject.business.requests.CreateApplicantRequest;
-import com.kodlamaio.bootcampproject.business.requests.UpdateApplicantRequest;
-import com.kodlamaio.bootcampproject.business.responses.CreateApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetAllApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.UpdateApplicantResponse;
+import com.kodlamaio.bootcampproject.business.requests.users.CreateApplicantRequest;
+import com.kodlamaio.bootcampproject.business.requests.users.UpdateApplicantRequest;
+import com.kodlamaio.bootcampproject.business.responses.users.CreateApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetAllApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.UpdateApplicantResponse;
 import com.kodlamaio.bootcampproject.core.utilities.results.DataResult;
 import com.kodlamaio.bootcampproject.core.utilities.results.Result;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -32,7 +33,8 @@ public class ApplicantsController {
     }
 
     @PostMapping("/add")
-    public DataResult<CreateApplicantResponse> add(@RequestBody CreateApplicantRequest createApplicantRequest){
+    @ResponseStatus(HttpStatus.CREATED)
+    public DataResult<CreateApplicantResponse> add(@Valid @RequestBody CreateApplicantRequest createApplicantRequest){
         return this.applicantService.add(createApplicantRequest);
     }
     @PutMapping

@@ -1,11 +1,11 @@
 package com.kodlamaio.bootcampproject.business.abstracts.users;
 
-import com.kodlamaio.bootcampproject.business.requests.CreateApplicantRequest;
-import com.kodlamaio.bootcampproject.business.requests.UpdateApplicantRequest;
-import com.kodlamaio.bootcampproject.business.responses.CreateApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetAllApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.GetApplicantResponse;
-import com.kodlamaio.bootcampproject.business.responses.UpdateApplicantResponse;
+import com.kodlamaio.bootcampproject.business.requests.users.CreateApplicantRequest;
+import com.kodlamaio.bootcampproject.business.requests.users.UpdateApplicantRequest;
+import com.kodlamaio.bootcampproject.business.responses.users.CreateApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetAllApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.GetApplicantResponse;
+import com.kodlamaio.bootcampproject.business.responses.users.UpdateApplicantResponse;
 import com.kodlamaio.bootcampproject.core.utilities.results.DataResult;
 import com.kodlamaio.bootcampproject.core.utilities.results.Result;
 
