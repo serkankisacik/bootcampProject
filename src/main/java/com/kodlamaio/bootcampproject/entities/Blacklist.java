@@ -1,6 +1,5 @@
 package com.kodlamaio.bootcampproject.entities;
 
-import com.kodlamaio.bootcampproject.entities.aplications.Application;
 import com.kodlamaio.bootcampproject.entities.users.Applicant;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,11 +9,11 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "black_lists")
+@Table(name = "blacklists")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BlackList {
+public class Blacklist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

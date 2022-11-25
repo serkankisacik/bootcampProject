@@ -1,7 +1,7 @@
 package com.kodlamaio.bootcampproject.entities.users;
 
 import com.kodlamaio.bootcampproject.entities.aplications.Application;
-import com.kodlamaio.bootcampproject.entities.BlackList;
+import com.kodlamaio.bootcampproject.entities.Blacklist;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +19,7 @@ public class Applicant extends User {
     private String about;
 
     @OneToMany(mappedBy = "applicant")
-    private List<BlackList> blackLists;
+    private List<Blacklist> blacklists;
     
     @OneToMany(mappedBy = "applicant")
     private List<Application> applications;
