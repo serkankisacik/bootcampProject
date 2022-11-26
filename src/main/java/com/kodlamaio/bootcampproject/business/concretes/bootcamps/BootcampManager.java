@@ -60,6 +60,6 @@ public class BootcampManager implements BootcampService {
     public DataResult<GetBootcampResponse> getById(int id) {
         Bootcamp bootcamp = this.bootcampRepository.findById(id);
         GetBootcampResponse response = this.modelMapperService.forResponse().map(bootcamp, GetBootcampResponse.class);
-        return null;
+        return new SuccessDataResult<GetBootcampResponse>(response);
     }
 }

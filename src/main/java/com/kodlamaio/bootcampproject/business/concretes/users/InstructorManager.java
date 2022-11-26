@@ -66,7 +66,6 @@ public class InstructorManager implements InstructorService {
     public DataResult<GetInstructorResponse> getById(int id) {
         Instructor instructor = this.instructorRepository.findById(id);
         GetInstructorResponse response = this.modelMapperService.forResponse().map(instructor, GetInstructorResponse.class);
-
         return new SuccessDataResult<GetInstructorResponse>(response);
     }
 
