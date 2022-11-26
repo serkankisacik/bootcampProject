@@ -19,4 +19,7 @@ public class Messages {
     public static final String EmployeeNotFound = "Employee Not Found";
     public static final String ApplicantAlreadyExist = "Applicant Already Exists";
     public static final String ApplicantNotFound = "Applicant Not Found";
+    public static final String BootcampCreated = "Bootcamp Created";
+    public static final String BootcampDeleted = "Bootcamp Deleted";
+    public static final String BootcampUpdated = "Bootcamp Updated";
 }

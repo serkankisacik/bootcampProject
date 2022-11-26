@@ -1,4 +1,4 @@
-package com.kodlamaio.bootcampproject.webApi.controllers.users;
+package com.kodlamaio.bootcampproject.api.controllers.users;
 
 import com.kodlamaio.bootcampproject.business.abstracts.users.InstructorService;
 import com.kodlamaio.bootcampproject.business.requests.users.CreateInstructorRequest;
