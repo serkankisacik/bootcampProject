@@ -22,4 +22,7 @@ public class Messages {
     public static final String BootcampCreated = "Bootcamp Created";
     public static final String BootcampDeleted = "Bootcamp Deleted";
     public static final String BootcampUpdated = "Bootcamp Updated";
+    public static final String ApplicationDeleted = "Application Deleted";
+    public static final String ApplicationCreated = "Application Created";
+    public static final String ApplicationUpdated = "Application Updated";
 }
